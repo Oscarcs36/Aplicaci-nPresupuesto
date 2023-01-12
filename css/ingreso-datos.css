@@ -1,0 +1,59 @@
+#ingreso-datos {
+    height: 70px;
+    background-color: #7c79a782;
+    border: #e7e7e7 1px solid;
+    display: flex;
+}
+
+#centrar-datos {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}   
+
+#operacion {
+    padding: 6px;
+    font-size: 20px;
+}
+
+.enviar-datos {
+    outline: none;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+#descripcion {
+    width: 400px;
+}
+
+#cantidad {
+    width: 100px;
+}
+
+#operacion, #descripcion, #cantidad {
+    margin-right: 15px;
+    border: 1px solid rgb(224, 223, 223);
+    transition: border .3s;
+}
+
+#operacion:focus, #descripcion:focus, #cantidad:focus {
+    border: 2px solid #28B9B5;
+}
+
+#enviar-datos {
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: rgb(25, 181, 43);
+    border-radius: 50%;
+    background-color: transparent;
+
+}
+
+#enviar-datos:active {
+    transform: translate(0, 5px); 
+}

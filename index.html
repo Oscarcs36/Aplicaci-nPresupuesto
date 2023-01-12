@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Presupuesto</title>
+    <link rel="stylesheet" href="/css/presupuesto.css">
+    <link rel="stylesheet" href="/css/ingreso-datos.css">
+    <link rel="stylesheet" href="/css/mostrar-datos.css">
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sofia+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="presupuesto">
+        <div class="contenedor-central">
+            <div id="titulo-presupuesto">Presupuesto disponible</div>
+            <div id="presupuesto-disponible">$2300.00</div>
+
+            <div class="contenedor-presupuesto" id="ingresos-presupuesto">
+                <div class="titulos-presupuesto" id="presupuesto-ingreso">INGRESOS</div>
+                <div class="datos-ingresos">
+                    <div id="ingresos-totales">$3600.00</div>
+                </div>
+            </div>
+
+            <div class="contenedor-presupuesto" id="egresos-presupuesto">
+                <div class="titulos-presupuesto">EGRESOS</div>
+                <div class="datos-ingresos">
+                    <div id="egresos-totales">$1300.00</div>
+                    <div class="porcentajes">36.11%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<form id="formulario">
+    <div id="ingreso-datos">
+        <div id="centrar-datos">
+            <select name="operacion" id="operacion">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+
+            <input type="text" name="descripcion" id="descripcion" class="enviar-datos" placeholder="Agrega descripcion" required>
+            <input type="number" name="cantidad" id="cantidad" class="enviar-datos" placeholder="Valor" required>
+
+            <button id="enviar-datos">
+                <i class="fa-regular fa-circle-check"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
+<div id="mostrar-datos">
+    <div class="tabla-datos" id="ingresos">
+        <div id="tiulo-ingresos" class="titulo-tabla">INGRESOS</div>
+
+        <div class="mostrar-item" id="item">
+            <div class="mostrar-elemento titulo-item">Salario</div>
+            <div class="mostrar-elemento valor-item">+ 2100,00 $</div>
+
+            <div class="mostrar-elemento contenedor-eliminar-item">
+                <button class="eliminar-item"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tabla-datos" id="egresos">
+        <div id="tiulo-egresos" class="titulo-tabla">EGRESOS</div>
+
+        <div class="mostrar-item" id="item">
+            <div class="mostrar-elemento titulo-item">Salario</div>
+            <div class="mostrar-elemento valor-item">+ 2100,00 $</div>
+
+            <div class="mostrar-elemento contenedor-eliminar-item">
+                <button class="eliminar-item"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="scripts/test.js"></script>
+
+<!--FontAwesome iconos-->
+<script src="https://kit.fontawesome.com/7c51acf510.js" crossorigin="anonymous"></script>
+</body>
+</html>
