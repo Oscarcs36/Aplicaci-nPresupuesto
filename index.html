@@ -10,32 +10,32 @@
     <link rel="stylesheet" href="/css/mostrar-datos.css">
 
     <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sofia+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SignWriting&family=Quicksand&family=Roboto+Mono&family=Sofia+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="mostrarInfo()">
     <div id="presupuesto">
         <div class="contenedor-central">
             <div id="titulo-presupuesto">Presupuesto disponible</div>
-            <div id="presupuesto-disponible">$2300.00</div>
+            <div id="presupuesto-disponible"></div>
 
             <div class="contenedor-presupuesto" id="ingresos-presupuesto">
                 <div class="titulos-presupuesto" id="presupuesto-ingreso">INGRESOS</div>
                 <div class="datos-ingresos">
-                    <div id="ingresos-totales">$3600.00</div>
+                    <div id="ingresos-totales"></div>
                 </div>
             </div>
 
             <div class="contenedor-presupuesto" id="egresos-presupuesto">
                 <div class="titulos-presupuesto">EGRESOS</div>
                 <div class="datos-ingresos">
-                    <div id="egresos-totales">$1300.00</div>
-                    <div class="porcentajes">36.11%</div>
+                    <div id="egresos-totales"></div>
+                    <div id="porcentaje-egresos"></div>
                 </div>
             </div>
         </div>
     </div>
 
-<form id="formulario">
+<form id="formulario" onsubmit="return false">
     <div id="ingreso-datos">
         <div id="centrar-datos">
             <select name="operacion" id="operacion">
@@ -43,10 +43,10 @@
                 <option value="-">-</option>
             </select>
 
-            <input type="text" name="descripcion" id="descripcion" class="enviar-datos" placeholder="Agrega descripcion" required>
-            <input type="number" name="cantidad" id="cantidad" class="enviar-datos" placeholder="Valor" required>
+            <input type="text" name="descripcion" id="descripcion" class="datos-form" placeholder="Agrega descripcion">
+            <input type="number" name="cantidad" id="cantidad" class="datos-form" placeholder="Valor">
 
-            <button id="enviar-datos">
+            <button id="enviar-datos" onclick="agregarItems()">
                 <i class="fa-regular fa-circle-check"></i>
             </button>
         </div>
@@ -55,36 +55,30 @@
 
 <div id="mostrar-datos">
     <div class="tabla-datos" id="ingresos">
-        <div id="tiulo-ingresos" class="titulo-tabla">INGRESOS</div>
+        <div class="titulo-tabla ingreso">INGRESOS</div>
 
-        <div class="mostrar-item" id="item">
-            <div class="mostrar-elemento titulo-item">Salario</div>
-            <div class="mostrar-elemento valor-item">+ 2100,00 $</div>
-
-            <div class="mostrar-elemento contenedor-eliminar-item">
-                <button class="eliminar-item"><i class="fa-regular fa-circle-xmark"></i></button>
-            </div>
+        <!--Nuevo ingreso-->
+        <div id="lista-ingresos">
+            
         </div>
 
     </div>
 
     <div class="tabla-datos" id="egresos">
-        <div id="tiulo-egresos" class="titulo-tabla">EGRESOS</div>
+        <div class="titulo-tabla egreso">EGRESOS</div>
 
-        <div class="mostrar-item" id="item">
-            <div class="mostrar-elemento titulo-item">Salario</div>
-            <div class="mostrar-elemento valor-item">+ 2100,00 $</div>
-
-            <div class="mostrar-elemento contenedor-eliminar-item">
-                <button class="eliminar-item"><i class="fa-regular fa-circle-xmark"></i></button>
-            </div>
+        <div id="lista-egresos">
+            
         </div>
-
     </div>
 
 </div>
 
-<script src="scripts/test.js"></script>
+
+<script src="scripts/item.js"></script>
+<script src="scripts/ingreso.js"></script>
+<script src="scripts/egreso.js"></script>
+<script src="scripts/presupuesto.js"></script>
 
 <!--FontAwesome iconos-->
 <script src="https://kit.fontawesome.com/7c51acf510.js" crossorigin="anonymous"></script>

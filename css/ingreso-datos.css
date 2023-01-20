@@ -1,8 +1,9 @@
 #ingreso-datos {
     height: 70px;
-    background-color: #7c79a782;
+    background-color: #ffffff;
     border: #e7e7e7 1px solid;
     display: flex;
+    box-shadow: 0 0 5px rgb(222, 222, 222);
 }
 
 #centrar-datos {
@@ -16,7 +17,7 @@
     font-size: 20px;
 }
 
-.enviar-datos {
+.datos-form {
     outline: none;
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
@@ -32,14 +33,19 @@
     width: 100px;
 }
 
+#operacion {
+    border-radius: 5px;
+}
+
 #operacion, #descripcion, #cantidad {
     margin-right: 15px;
-    border: 1px solid rgb(224, 223, 223);
-    transition: border .3s;
+    border: 1px solid rgb(165, 165, 165);
+    transition: border .2s;
 }
 
 #operacion:focus, #descripcion:focus, #cantidad:focus {
-    border: 2px solid #28B9B5;
+    border: 2px solid #4154f1;
+    /*28B9B5*/
 }
 
 #enviar-datos {
@@ -48,7 +54,7 @@
     font-size: 30px;
     width: 30px;
     height: 30px;
-    color: rgb(25, 181, 43);
+    color: black;
     border-radius: 50%;
     background-color: transparent;
 
@@ -56,4 +62,5 @@
 
 #enviar-datos:active {
     transform: translate(0, 5px); 
+    box-shadow: 0 5px 4px #969696;
 }

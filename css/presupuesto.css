@@ -74,7 +74,7 @@ body {
     display: flex;
 }
 
-.porcentajes {
+#porcentaje-egresos {
     font-size: 11px;
     line-height: 20px;
     padding: 0 4px;
